@@ -1,0 +1,398 @@
+/*
+Theme Name: UpSmart
+Theme URI: http://upsmart.com
+Author: T.J. Lipscomb
+Author URI: http://tjl.co/
+Description: Default theme designed for UpSmart, LLC.
+Version: 1.1
+License: TBD
+License URI: TBD
+Tags: 
+Text Domain: upsmart
+*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700,700italic,800,800italic);
+
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: inherit;
+	font-size: 100%;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+body {
+	background: #fff;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {/* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: 0;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+
+
+/* Page layout */
+body {
+	font-family: 'Open Sans','Helvetica Neue','Helvetica','Arial',sans-serif;
+	font-size: 10pt;
+	line-height: 14pt;
+	background: -moz-linear-gradient(top, #EEE 0px,#F8F8F8 500px) fixed;
+}
+
+/* Element formatting */
+h1,h2,h3 {
+	font-weight: bold;
+	font-family: 'Helvetica Neue','Helvetica','Arial',sans-serif;
+}
+h1 {
+	font-size: 28pt;
+	line-height: 32pt;
+}
+h2 {
+	font-size: 24pt;
+	line-height: 28pt;
+}
+h3 {
+	font-size: 16pt;
+	line-height: 20pt;
+}
+a {
+	color: #5BF;
+	text-decoration: none;
+}
+a:visited {
+	color: #4AA4E0;
+}
+a:hover {
+	color: #408DC0;
+}
+
+/*Assistive things */
+.assistive-text,.skip-link {
+	display: none;
+}
+
+/* Navigation */
+body>#mainnav {
+	position: fixed;
+	top: 0;
+	z-index: 1000;
+	width: 100%;
+	height: 25px;
+	background: -moz-linear-gradient(top, #444, #333) !important;
+	border-bottom: 1px solid #000;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+body>#mainnav a {
+	display: block;
+	float: left;
+	height: 25px;
+	line-height: 25px;
+	color: #CCC;
+	text-decoration: none;
+	text-shadow: 0 -1px 0px rgba(0,0,0,1);
+	padding: 0 8px;
+	border-left: 1px solid #333;
+	border-right: 1px solid #444;
+}
+body>#mainnav a:link:hover {
+	color: #EEE;
+	border-right: 1px solid #555;
+	background-image: -moz-linear-gradient(top, #555, #444) !important;
+}
+	
+/*Header*/
+body>header {
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	top: 25px;
+	height: 46px;
+	padding: 9px 0 0 9px;
+	
+	background: -moz-linear-gradient(top, #EEE 0px,#F8F8F8 500px) fixed;
+}
+#site-title {
+	padding: 2px 0;
+	font-size: 33px;
+	line-height: 40px;
+	color: #444;
+}
+#site-description {
+	display: none;
+}
+body>header img {
+	height: 37px;
+	padding-left: 4px;
+	vertical-align: top;
+}
+
+/*Footer*/
+footer {
+	font-size: 0.9em;
+	color: #444;
+	clear: both;
+	text-align: center;
+}
+
+/*Document body/content*/
+#primary {
+	background: #FFF;
+	border: 1px solid #CCC;
+	width: 80%;
+	width: -moz-calc(100% - 250px);
+	width: -webkit-calc(100% - 250px);
+	width: calc(100% - 250px);
+}
+#content {
+	padding: 1em;
+}
+#secondary {
+	background: -moz-linear-gradient(top, #EEE 0px,#F8F8F8 500px) fixed;
+	position: absolute;
+	right: 0;
+	top: 80px;
+	width: 20%;
+	width: -moz-calc(248px);
+	width: -webkit-calc(248px);
+	width: calc(248px);
+}
+#secondary>aside {
+	padding: 0.5em;
+	margin: 0 1em 1em;
+	background: #FFF;
+	border: 1px solid #CCC;
+}
+/*Page Structure*/
+#wrapper {
+	padding-top: 80px;
+}
+
+/*Post formatting*/
+.entry-title,.entry-title a {
+	color: #666;
+	text-decoration: none;
+}
+.entry-title a:hover {
+	color: #444;
+}
+p {
+	text-align: justify;
+	text-indent: 1em;
+	margin-bottom: 0.5em;
+}
+
+
+/*Home page*/
+
+	/*Home page header*/
+	body.page-template-featured-php header {
+		height: 100px;
+		background: transparent !important;
+	}
+	body.page-template-featured-php header hgroup {
+		float: left;
+	}
+	body.page-template-featured-php header h1 {
+		font-size: 72px;
+		line-height: 100px;
+		color: #444;
+		text-shadow: 0 -1px 0px rgba(0,0,0,0.5), 0 1px 0px rgba(255,255,255,0.5);
+	}
+	body.page-template-featured-php header img {
+		padding-top: 10px;
+		height: 80px;
+		vertical-align: top;
+	}
+	body.page-template-featured-php header nav {
+		float: right;
+	}
+	body.page-template-featured-php header nav li {
+		float: left;
+		font-size: 1.7em;
+		line-height: 80px;
+	}
+	body.page-template-featured-php header a {
+		color: #444;
+		text-decoration: none;
+	}
+	body.page-template-featured-php header a:hover {
+		color: #5BF;
+	}
+	body.page-template-featured-php header nav li:after {
+		content: "|";
+		padding: 0 8px;
+	}
+	body.page-template-featured-php header nav li:last-child:after {
+		content: '';
+	}
+
+	/*Home page content*/
+	body.page-template-featured-php #wrapper {
+		width: 80%;
+		min-width: 800px;
+		margin: 0 auto;
+		position: relative;
+		padding: 0;
+	}
+	body.page-template-featured-php #wrapper>*,#bottom>div>div {
+		background: #FFF;
+	}
+
+	body.page-template-featured-php #featured {
+		font-size: 1.5em;
+		margin: 1em 0;
+		
+		text-indent: 1em;
+	}
+	body.page-template-featured-php #featured h2 {
+		font-size: 1.5em;
+		color: #444;
+		text-indent: 0;
+	}
+
+	body.page-template-featured-php #featured>img {
+		float: right;
+		margin: 0.5em;
+	}
+	
+	/*Home page footer widgets*/
+	body.page-template-featured-php #bottom>div>div {
+		border: 1px solid #ccc;
+		box-shadow: 0 0 20px rgba(0,0,0,0.1);
+	}
+
+	body.page-template-featured-php #bottom>div {
+		width: 33.3333333%;
+		position: absolute;
+		z-index: 10000;
+		float: left;
+	}
+	body.page-template-featured-php #bottom>div:nth-child(2) {
+		left: 33.3333333%;
+	}
+	body.page-template-featured-php #bottom>div:nth-child(3) {
+		left: 66.6666666%;
+	}
+
+	body.page-template-featured-php #bottom>div>div {
+		margin: 0 0.5em;
+		padding: 8px;
+		height: 100px;
+	}
+	body.page-template-featured-php #bottom>div>div h3 {
+		font-size: 1.5em;
+	}
+	body.page-template-featured-php #bottom .textwidget aside {
+		display: none;
+	}
+	body.page-template-featured-php #bottom>div:first-child>div {
+		margin-left: 0;
+	}
+	body.page-template-featured-php #bottom>div:last-child>div {
+		margin-right: 0;
+	}
+
+	/*Home page footer widget hovers*/
+	body.page-template-featured-php #bottom>div,
+	body.page-template-featured-php #bottom>div>div
+	body.page-template-featured-php #bottom .textwidget aside {
+		transition-duration: 0.5s;
+		-moz-transition-duration: 0.5s;
+		-webkit-transition-duration: 0.5s;
+		
+		transition-property: background, height, width, margin, left;
+		-moz-transition-property: background, height, width, margin, left;
+		-webkit-transition-property: background, height, width, margin, left;
+	}
+	body.page-template-featured-php #bottom>div.selected {
+		position: absolute;
+		z-index: 10001;
+		left: 0;
+		width: 100%;
+		margin: 0;
+	}
+	body.page-template-featured-php #bottom>div.selected>div {
+		background-color: rgba(255,255,255,0.95);
+		margin: 0;
+		height: 200px;
+		height: calc(500px + 1.5em);
+		height: -moz-calc(500px + 1.5em);
+		height: -webkit-calc(500px + 1.5em);
+		
+	}
+	body.page-template-featured-php #bottom>div.selected .textwidget aside {
+		display: block;
+	}
+	
+
+@media(max-width: 800px) {
+	body.page-template-featured-php #wrapper {
+		width: 100%;
+		min-width: 400px;
+	}
+	body.page-template-featured-php #featured>img {
+		width: 50%;
+		max-width: 300px;
+	}
+}
+
+/*Github stuff*/
+.github_commits {
+	width: 100%;
+	margin: 1em 0;
+}
+
+.github_commits td,.github_commits th {
+	padding: 0.1em;
+}
+.github_commits th {
+	font-size: 1.2em;
+}
+.github_commits tr:nth-child(4n+3),
+.github_commits tr:nth-child(4n+4){
+	background: #F8F8F8;
+}
+
+.github_commits img {
+	height: 2em;
+	vertical-align: top;
+}
