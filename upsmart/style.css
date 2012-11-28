@@ -38,7 +38,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	outline: 0;
 }
 body {
-	background: #fff;
+	background: #fff !important;
 	line-height: 1;
 }
 ol, ul {
@@ -74,7 +74,8 @@ body {
 	font-family: 'Open Sans','Helvetica Neue','Helvetica','Arial',sans-serif;
 	font-size: 10pt;
 	line-height: 14pt;
-	background: -moz-linear-gradient(top, #EEE 0px,#F8F8F8 500px) fixed;
+	background: #FFF;
+	padding-top: 25px;
 }
 
 /* Element formatting */
@@ -117,7 +118,7 @@ body>#mainnav {
 	z-index: 1000;
 	width: 100%;
 	height: 25px;
-	background: -moz-linear-gradient(top, #444, #333) !important;
+	background: -moz-linear-gradient(top, #444, #3B3B3B) !important;
 	border-bottom: 1px solid #000;
 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
@@ -130,32 +131,29 @@ body>#mainnav a {
 	text-decoration: none;
 	text-shadow: 0 -1px 0px rgba(0,0,0,1);
 	padding: 0 8px;
-	border-left: 1px solid #333;
+	border-left: 1px solid #3B3B3B;
 	border-right: 1px solid #444;
 }
 body>#mainnav a:link:hover {
 	color: #EEE;
-	border-right: 1px solid #555;
+	border-right: 1px solid #4B4B4B;
 	background-image: -moz-linear-gradient(top, #555, #444) !important;
 }
 	
 /*Header*/
 body>header {
-	position: fixed;
-	z-index: 1000;
 	width: 100%;
-	top: 25px;
 	height: 46px;
 	padding: 9px 0 0 9px;
-	
-	background: -moz-linear-gradient(top, #EEE 0px,#F8F8F8 500px) fixed;
+	border-bottom: 1px solid #DDD;
+	background: #F8F8F8;
 }
-#site-title {
+/*#site-title {
 	padding: 2px 0;
 	font-size: 33px;
 	line-height: 40px;
 	color: #444;
-}
+}*/
 #site-description {
 	display: none;
 }
@@ -175,8 +173,7 @@ footer {
 
 /*Document body/content*/
 #primary {
-	background: #FFF;
-	border: 1px solid #CCC;
+	border-right: 1px solid #DDD;
 	width: 80%;
 	width: -moz-calc(100% - 250px);
 	width: -webkit-calc(100% - 250px);
@@ -186,24 +183,30 @@ footer {
 	padding: 1em;
 }
 #secondary {
-	background: -moz-linear-gradient(top, #EEE 0px,#F8F8F8 500px) fixed;
 	position: absolute;
 	right: 0;
-	top: 80px;
+	top: calc(80px + 1em);
 	width: 20%;
 	width: -moz-calc(248px);
 	width: -webkit-calc(248px);
 	width: calc(248px);
 }
 #secondary>aside {
-	padding: 0.5em;
-	margin: 0 1em 1em;
+	padding: 0.5em 0;
+	margin: 0 1em;
 	background: #FFF;
-	border: 1px solid #CCC;
+	border-bottom: 1px solid #CCC;
+}
+#secondary>aside h3 {
+	font-size: 10pt;
+	line-height: 14pt;
+}
+#secondary>aside:last-child {
+	border-bottom: 0;
 }
 /*Page Structure*/
 #wrapper {
-	padding-top: 80px;
+	padding-top: 1em;
 }
 
 /*Post formatting*/
@@ -227,6 +230,7 @@ p {
 	body.page-template-featured-php header {
 		height: 100px;
 		background: transparent !important;
+		border-bottom: 1px solid #DDD;
 	}
 	body.page-template-featured-php header hgroup {
 		float: left;
@@ -295,16 +299,17 @@ p {
 	}
 	
 	/*Home page footer widgets*/
+	body.page-template-featured-php #bottom {
+		height: 100px;
+	}
 	body.page-template-featured-php #bottom>div>div {
-		border: 1px solid #ccc;
-		box-shadow: 0 0 20px rgba(0,0,0,0.1);
+		border-right: 1px solid #ddd;
 	}
 
 	body.page-template-featured-php #bottom>div {
 		width: 33.3333333%;
 		position: absolute;
 		z-index: 10000;
-		float: left;
 	}
 	body.page-template-featured-php #bottom>div:nth-child(2) {
 		left: 33.3333333%;
@@ -315,7 +320,7 @@ p {
 
 	body.page-template-featured-php #bottom>div>div {
 		margin: 0 0.5em;
-		padding: 8px;
+		
 		height: 100px;
 	}
 	body.page-template-featured-php #bottom>div>div h3 {
@@ -329,6 +334,7 @@ p {
 	}
 	body.page-template-featured-php #bottom>div:last-child>div {
 		margin-right: 0;
+		border-right: 0;
 	}
 
 	/*Home page footer widget hovers*/
@@ -339,9 +345,9 @@ p {
 		-moz-transition-duration: 0.5s;
 		-webkit-transition-duration: 0.5s;
 		
-		transition-property: background, height, width, margin, left;
-		-moz-transition-property: background, height, width, margin, left;
-		-webkit-transition-property: background, height, width, margin, left;
+		transition-property: background, height, width, margin, padding, left, border;
+		-moz-transition-property: background, height, width, margin, padding, left, border;
+		-webkit-transition-property: background, height, width, margin, padding, left, border;
 	}
 	body.page-template-featured-php #bottom>div.selected {
 		position: absolute;
@@ -351,6 +357,8 @@ p {
 		margin: 0;
 	}
 	body.page-template-featured-php #bottom>div.selected>div {
+		border: 1px solid #ddd;
+		padding: 8px;
 		background-color: rgba(255,255,255,0.95);
 		margin: 0;
 		height: 200px;

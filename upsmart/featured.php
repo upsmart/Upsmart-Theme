@@ -8,7 +8,7 @@ get_header("featured"); ?>
 	<div style='width: 50%; float: left;'><div style='margin-right: 5px; height: 400px; position: relative; background: url("http://flickholdr.com/600/600")'>
 		<h2 style='position: absolute; bottom: 0; color: #FFF;'>Featured Site: Something</h2>
 	</div></div>
-	<div style='width: 50%; height: 195px; float: right;'><div style='font-size: 0.9em; margin-left: 5px; padding: 5px; background: #FFF; height: 185px; overflow: hidden;'>
+	<div id="logon" style='width: 50%; height: 195px; float: right;'><div style='font-size: 0.9em; margin-left: 5px; padding: 5px; background: #FFF; height: 185px; overflow: hidden;'>
 		<?php if (have_posts()) : while (have_posts()) : the_post();?>
 			<h2><?php the_title();?></h2>
 			<?php the_content(); ?>
