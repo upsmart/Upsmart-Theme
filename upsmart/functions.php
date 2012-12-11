@@ -45,6 +45,11 @@ if ( ! isset( $content_width ) )
 	$content_width = 584;
 
 /**
+  * Disable the admin bar
+  */
+show_admin_bar(false);
+	
+/**
  * Tell WordPress to run twentyeleven_setup() when the 'after_setup_theme' hook is run.
  */
 add_action( 'after_setup_theme', 'twentyeleven_setup' );

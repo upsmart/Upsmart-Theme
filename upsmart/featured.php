@@ -5,8 +5,13 @@ Template Name: UpSmart Home
 
 get_header("featured"); ?>
 <section id='featured' style='background: transparent; padding: 0;'>
-	<div style='width: 50%; float: left;'><div style='margin-right: 5px; height: 400px; position: relative; background: url("http://flickholdr.com/600/600")'>
-		<h2 style='position: absolute; bottom: 0; color: #FFF;'>Featured Site: Something</h2>
+	<div id='featured-login'><div>
+		
+		<?php if(is_user_logged_in()): $user = wp_get_current_user(); ?>
+			<h2 style='position: absolute; bottom: 0; color: #FFF;'>Welcome back, <?php echo $user->display_name; ?>.</h2>
+		<?php else: ?>
+			<?php wp_login_form(); ?>
+		<?php endif; ?>
 	</div></div>
 	<div id="logon" style='width: 50%; height: 195px; float: right;'><div style='font-size: 0.9em; margin-left: 5px; padding: 5px; background: #FFF; height: 185px; overflow: hidden;'>
 		<?php if (have_posts()) : while (have_posts()) : the_post();?>

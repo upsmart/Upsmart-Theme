@@ -4,9 +4,8 @@
  *
  * Displays all of the <head> section and everything up till <div id="main">
  *
- * @package WordPress
- * @subpackage Twenty_Eleven
- * @since Twenty Eleven 1.0
+ * @package UpSmart
+ * @subpackage UpSmart
  */
 ?><!DOCTYPE html>
 <!--[if IE 6]>
@@ -75,6 +74,25 @@
 	<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'upsmart' ); ?>"><?php _e( 'Skip to secondary content', 'upsmart' ); ?></a></div>
 	<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
 	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+	
+	<?php /* Shows login links/user info */ ?>
+	<div id='userbar'><div>
+	<?php if(is_user_logged_in()): $user = wp_get_current_user(); ?>
+		
+		Welcome back, <?php echo $user->display_name; ?>. 
+		<div class='menu'>
+			<a href='<?php echo wp_logout_url(); ?>'><?php _e( 'Log out', 'upsmart' ); ?></a>
+			<?php echo wp_register('',''); ?>
+		</div>
+		
+	<?php else: ?>
+		Hello, guest.
+		<div class='menu'>
+			<a href='<?php echo wp_login_url(); ?>'><?php _e( 'Log in', 'upsmart' ); ?></a>
+			<?php echo wp_register('',''); ?>
+		</div>
+	<?php endif; ?>
+	</div></div><!-- #userbar -->
 </nav><!-- #mainnav -->
 <header>
 			<hgroup>
