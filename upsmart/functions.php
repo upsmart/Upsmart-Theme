@@ -420,7 +420,17 @@ function upsmart_widgets_init() {
 		'before_title' => '<h2>',
 		'after_title' => '</h2>',
 	) );
-	
+
+        register_sidebar( array(
+                'name' => __( 'Homepage Featured Area 2', 'upsmart' ),
+                'id' => 'home-featured-2',
+                'description' => __( 'A widget area for the home page', 'upsmart' ),
+                'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+                'after_widget' => "</aside>",
+                'before_title' => '<h2>',
+                'after_title' => '</h2>',
+        ) );
+
 	register_sidebar( array(
 		'name' => __( 'Homepage Footer Area One', 'upsmart' ),
 		'id' => 'sidebar-3',

@@ -22,6 +22,7 @@
 <html <?php language_attributes(); ?>>
 <!--<![endif]-->
 <head>
+<link rel="shortcut icon" href="<?php bloginfo('stylesheet_directory'); ?>/favicon.ico" />
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
 <meta name="viewport" content="width=device-width" />
 <title><?php
@@ -72,7 +73,7 @@
 <div id="wrapper">
 <header>
 	<hgroup>
-		<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
+		<h1 id="site-title"><span><img src="wp-content/uploads/upsmart/1/logo.png"/><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
 		<!--<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>-->
 	</hgroup>
 

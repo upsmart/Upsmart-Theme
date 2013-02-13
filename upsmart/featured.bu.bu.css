@@ -241,7 +241,6 @@
 		display: block;
 	}
 	
-
 /*
  * At medium-small widths, the padding on the side of the layout goes away
  * and the layout starts scaling
@@ -287,13 +286,3 @@
 		height: auto;
 	}
 }
-
-/*Modifications to widgets on featured page*/
-.advanced_recent_posts_widget ul li {
-	border-bottom: none !important;
-}
-
-.advanced_recent_posts_widget img {
-	float: none !important;
-}
-

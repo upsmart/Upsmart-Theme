@@ -106,6 +106,13 @@ a:hover {
 	color: #408DC0;
 }
 
+strong {
+	font-weight: bold;
+}
+em {
+	font-style: italic;
+}
+
 /*Forms*/
 input[type=submit],button {
 	display: block;
@@ -153,7 +160,11 @@ body>#mainnav {
 	border-bottom: 1px solid #000;
 	box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
+ul.menu {
+	padding-left: 0;
+}
 body>#mainnav .menu-item {
+	list-style: none;
 	position: relative;
 	float: left;
 }
@@ -411,3 +422,13 @@ input[type=radio] {
 .normalinput input {
 	width: auto;
 }*/
+
+/***************
+ * BUDDY PRESS *
+ ***************/
+div.item-list-tabs,
+div#subnav.item-list-tabs,
+.padder div.pagination {
+	margin-left: -1em !important;
+	margin-right: -1em !important;
+}
