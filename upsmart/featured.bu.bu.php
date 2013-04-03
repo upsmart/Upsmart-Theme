@@ -19,11 +19,11 @@ get_header("featured"); ?>
 			<?php the_content(); ?>
 		<?php endwhile; endif; ?>
 	</div></div>
-	<div class='featured-1col featured-1row featured-bottomrow widget-area'><div style='position: relative;'>
-		<?php dynamic_sidebar( 'home-featured-1' ); ?>
+	<div class='featured-1col featured-1row featured-bottomrow'><div style='position: relative; background: url("http://flickholdr.com/600/200/space")'>
+		<h2 style='position: absolute; bottom: 0; color: #FFF;'>Featured Site 2</h2>
 	</div></div>
-	<div class='featured-1col featured-1row featured-bottomrow widget-area'><div style='position: relative;'>
-		<?php dynamic_sidebar( 'home-featured-2' ); ?>
+	<div class='featured-1col featured-1row featured-bottomrow'><div style='position: relative; background: url("http://flickholdr.com/600/200/grass")'>
+		<h2 style='position: absolute; bottom: 0; color: #FFF;'>Featured Site 3</h2>
 	</div></div>
 	<br style='clear: both'/>
 </section>
@@ -44,17 +44,14 @@ get_header("featured"); ?>
 	//alert(typeof($));
 	(function($) {
 		$("#bottom .widget-area").hover(function() {
+			
 			nh = this.offsetTop-$("#featured").children()[0].offsetTop;
 			$(this).css('margin-top',-1*nh);
 			$(this).addClass('selected');
-			setTimeout(function() {
-				$("#bottom .widget-area").removeClass('unhover');
-			},5000);
 		},
 		function() {
 			$(this).css('margin-top',0);
 			$(this).removeClass('selected');
-			$(this).addClass('unhover');
 		});
 		
 	})(jQuery);

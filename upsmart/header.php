@@ -32,7 +32,8 @@
 	wp_title( '|', true, 'right' );
 
 	// Add the blog name.
-	bloginfo( 'name' );
+	//Disabled because something else is already adding the blog name to the title.
+	//bloginfo( 'name' );
 
 	// Add the blog description for the home/front page.
 	$site_description = get_bloginfo( 'description', 'display' );
@@ -67,39 +68,38 @@
 </head>
 
 <body <?php body_class(); ?>>
-<nav id="mainnav" role="navigation">
-	<h3 class="assistive-text"><?php _e( 'Main menu', 'upsmart' ); ?></h3>
-	<?php /* Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
-	<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'upsmart' ); ?>"><?php _e( 'Skip to primary content', 'upsmart' ); ?></a></div>
-	<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'upsmart' ); ?>"><?php _e( 'Skip to secondary content', 'upsmart' ); ?></a></div>
-	<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
-	<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-	
-	<?php /* Shows login links/user info */ ?>
-	<div id='userbar'><div>
-	<?php if(is_user_logged_in()): $user = wp_get_current_user(); ?>Welcome back, <?php echo $user->display_name; ?>.<div class='menu'><a href='<?php echo wp_logout_url(); ?>'><?php _e( 'Log out', 'upsmart' ); ?></a><?php echo wp_register('',''); ?></div>
-	<?php else: ?>Hello, guest.<div class='menu'><a href='<?php echo wp_login_url(); ?>'><?php _e( 'Log in', 'upsmart' ); ?></a><?php echo wp_register('',''); ?></div><?php endif; ?>
-	</div></div><!-- #userbar -->
-</nav><!-- #mainnav -->
-<header>
-			<hgroup>
-				<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
-				<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
-			</hgroup>
+	<header>
+		<hgroup>
+			<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>
+			<h2 id="site-description"><?php bloginfo( 'description' ); ?></h2>
+		</hgroup>
 
-			<?php
-				// Has the text been hidden?
-				/*if ( 'blank' == get_header_textcolor() ) :
-			?>
-				<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
-				<?php get_search_form(); ?>
-				</div>
-			<?php
-				else :
-			?>
-				<?php get_search_form(); ?>
-			<?php endif;*/ ?>
-
+		<?php
+			// Has the text been hidden?
+			/*if ( 'blank' == get_header_textcolor() ) :
+		?>
+			<div class="only-search<?php if ( $header_image ) : ?> with-image<?php endif; ?>">
+			<?php get_search_form(); ?>
+			</div>
+		<?php
+			else :
+		?>
+			<?php get_search_form(); ?>
+		<?php endif;*/ ?>
+		<nav id="mainnav" role="navigation">
+			<h3 class="assistive-text"><?php _e( 'Main menu', 'upsmart' ); ?></h3>
+			<?php /* Allow screen readers / text browsers to skip the navigation menu and get right to the good stuff. */ ?>
+			<div class="skip-link"><a class="assistive-text" href="#content" title="<?php esc_attr_e( 'Skip to primary content', 'upsmart' ); ?>"><?php _e( 'Skip to primary content', 'upsmart' ); ?></a></div>
+			<div class="skip-link"><a class="assistive-text" href="#secondary" title="<?php esc_attr_e( 'Skip to secondary content', 'upsmart' ); ?>"><?php _e( 'Skip to secondary content', 'upsmart' ); ?></a></div>
+			<?php /* Our navigation menu. If one isn't filled out, wp_nav_menu falls back to wp_page_menu. The menu assigned to the primary location is the one used. If one isn't assigned, the menu with the lowest ID is used. */ ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			
+			<?php /* Shows login links/user info */ /*?>
+			<div id='userbar'><div>
+			<?php if(is_user_logged_in()): $user = wp_get_current_user(); ?>Welcome back, <?php echo $user->display_name; ?>.<div class='menu'><a href='<?php echo wp_logout_url(); ?>'><?php _e( 'Log out', 'upsmart' ); ?></a><?php echo wp_register('',''); ?></div>
+			<?php else: ?>Hello, guest.<div class='menu'><a href='<?php echo wp_login_url(); ?>'><?php _e( 'Log in', 'upsmart' ); ?></a><?php echo wp_register('',''); ?></div><?php endif; ?>
+			</div></div><!-- #userbar --><?php */ ?>
+		</nav><!-- #mainnav -->
+		<br style='clear: both'/>
 	</header><!-- #branding -->
 <div id="wrapper">

@@ -4,7 +4,7 @@
 
 	/*Home page header*/
 	header {
-		min-height: 100px;
+		height: 100px;
 		border-bottom: 1px solid #DDD;
 	}
 	header hgroup {
@@ -77,9 +77,6 @@
 	}
 
 	/*Home page content*/
-	#mainnav {
-	  padding-top: 30px;
-	}
 	#wrapper {
 		width: 80%;
 		min-width: 1100px;
@@ -88,8 +85,7 @@
 		position: relative;
 		padding: 0;
 	}
-	/*#wrapper>*,#bottom>div>div {*/
-	#wrapper>* {
+	#wrapper>*,#bottom>div>div {
 		background: #FFF;
 	}
 
@@ -97,6 +93,7 @@
 		font-size: 1.5em;
 		margin: 1em 0;
 		
+		text-indent: 1em;
 	}
 	#featured>div>div {
 		margin-left: 5px;
@@ -122,7 +119,6 @@
 	}
 	.featured-content>div {
 		font-size: 0.9em;
-		line-height: 21px;
 		padding: 5px; background: #FFF; height: 185px; overflow: hidden;
 	}
 	
@@ -136,10 +132,6 @@
 		position: absolute;
 		width: 400px;
 		bottom: 15px;
-	}
-	/*Formatting the recent posts widget*/
-	.advanced_recent_posts_widget ul li {
-	  border-bottom: none !important;
 	}
 	#loginform label {
 		color: #FFF;
@@ -219,7 +211,6 @@
 	#bottom>div,
 	#bottom>div>div
 	#bottom .textwidget aside {
-		/*outline: 1px solid red;*/
 		transition-duration: 0.5s;
 		-moz-transition-duration: 0.5s;
 		-webkit-transition-duration: 0.5s;
@@ -230,14 +221,14 @@
 	}
 	#bottom>div.selected {
 		position: absolute;
-		z-index: 9000;
+		z-index: 10001;
 		left: 0;
 		width: 100%;
 		margin: 0;
 	}
 	#bottom>div.selected>div {
-		border: medium none; /*1px solid #ddd;*/
-		/*padding: 8px;*/
+		border: 1px solid #ddd;
+		padding: 8px;
 		background-color: rgba(255,255,255,0.95);
 		margin: 0;
 		height: 500px;
@@ -268,20 +259,6 @@
 	}
 }
 
-@media(max-width: 950px) {
-	.featured-content > div {
-		height: 235px;
-		line-height: 16px;
-	}
-}
-
-/*Menu scaling*/
-@media(max-width: 960px) {
-	#mainnav {
-		padding: 0 0 10px;
-	}
-}
-
 /*
  * At even smaller widths, things shift to become vertical.
  */
@@ -308,35 +285,4 @@
 		border-width: 0 0 1px 0;
 		height: auto;
 	}
-}
-
-.company-profile-shortcode {
-	
-}
-.company-profile-shortcode >li {
-	width: 33%;
-	width: -moz-calc(33% - 8px);
-	width: -webkit-calc(33% - 8px);
-	width: calc(33% - 8px);
-	padding-left: 4px;
-	padding-right: 4px;
-	float: left;
-	border-right: 1px solid #ddd;
-}
-.company-profile-shortcode >li:last-child {
-	border-right: 0 none;
-}
-.company-profile-shortcode >li>img {
-	float: none !important;
-	display: block;
-	margin: 0 auto;
-	max-width: 100px;
-	max-height: 100px;
-}
-.company-profile-shortcode >li>h3 {
-	clear: both;
-}
-
-#bottom>div.selected .textwidget>span {
-	display: none;
 }

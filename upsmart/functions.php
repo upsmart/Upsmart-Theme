@@ -47,7 +47,7 @@ if ( ! isset( $content_width ) )
 /**
   * Disable the admin bar
   */
-show_admin_bar(false);
+//show_admin_bar(false);
 	
 /**
  * Tell WordPress to run upsmart_setup() when the 'after_setup_theme' hook is run.
