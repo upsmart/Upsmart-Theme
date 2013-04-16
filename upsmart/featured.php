@@ -42,19 +42,17 @@ get_header("featured"); ?>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 <script type="text/javascript">
 	//alert(typeof($));
+	var hoverTimeout = false;
 	(function($) {
 		$("#bottom .widget-area").hover(function() {
-			nh = this.offsetTop-$("#featured").children()[0].offsetTop;
+			nh = $("#bottom")[0].offsetTop-$("#featured").children()[0].offsetTop;
 			$(this).css('margin-top',-1*nh);
 			$(this).addClass('selected');
-			setTimeout(function() {
-				$("#bottom .widget-area").removeClass('unhover');
-			},5000);
+			
 		},
 		function() {
 			$(this).css('margin-top',0);
 			$(this).removeClass('selected');
-			$(this).addClass('unhover');
 		});
 		
 	})(jQuery);

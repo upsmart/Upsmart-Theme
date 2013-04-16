@@ -65,6 +65,11 @@
 	 */
 	wp_head();
 ?>
+<script type="text/javascript">
+jQuery(document).ready(function() {
+	jQuery("#primary,#secondary").css("min-height",Math.max(jQuery("#primary").height(),jQuery("#secondary").height()));
+});
+</script>
 </head>
 
 <body <?php body_class(); ?>>

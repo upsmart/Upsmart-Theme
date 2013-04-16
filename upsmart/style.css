@@ -40,6 +40,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 body {
 	background: #fff !important;
 	line-height: 1;
+	/*padding-bottom: 50px;*/
 }
 ol, ul {
 	list-style: none;
@@ -114,30 +115,31 @@ em {
 
 /*Forms*/
 input[type=submit],button {
-	display: block;
-	margin: 0 auto;
-	padding: 0.2em 1em;
-	font-size: 20px;
-	font-weight: bold;
-	font-family: 'Open Sans','Helvetica Neue','Helvetica','Arial',sans-serif;
-	color: #FFF;
-	text-shadow: 0 -1px 0 #408dc0;
-	box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.25);
-	background: -moz-linear-gradient(top, #5BF, #408dc0);
-	background: -webkit-linear-gradient(top, #5BF, #408dc0);
-	background: linear-gradient(top, #5BF, #408dc0);
-	border-radius: 6px;
-	border: 1px solid #408dc0;
+	display: block !important;
+	margin: 0 auto !important;
+	padding: 0.2em 1em !important;
+	font-size: 20px !important;
+	line-height: 20px !important;
+	font-weight: bold !important;
+	font-family: 'Open Sans','Helvetica Neue','Helvetica','Arial',sans-serif !important;
+	color: #FFF !important;
+	text-shadow: 0 -1px 0 #408dc0 !important;
+	box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.25) !important;
+	background: -moz-linear-gradient(top, #5BF, #408dc0) !important;
+	background: -webkit-linear-gradient(top, #5BF, #408dc0) !important;
+	background: linear-gradient(top, #5BF, #408dc0) !important;
+	border-radius: 6px !important;
+	border: 1px solid #408dc0 !important;
 }
 input[type=submit]:hover,button:hover {
-	background: -moz-linear-gradient(top, #5BF, #4AA4E0);
-	background: -webkit-linear-gradient(top, #5BF, #4AA4E0);
-	background: linear-gradient(top, #5BF, #4AA4E0);
+	background: -moz-linear-gradient(top, #5BF, #4AA4E0) !important;
+	background: -webkit-linear-gradient(top, #5BF, #4AA4E0) !important;
+	background: linear-gradient(top, #5BF, #4AA4E0) !important;
 }
 input[type=submit]:active,button:active {
-	background: -moz-linear-gradient(top, #408dc0, #5BF);
-	background: -webkit-linear-gradient(top, #408dc0, #5BF);
-	background: linear-gradient(top, #408dc0, #5BF);
+	background: -moz-linear-gradient(top, #408dc0, #5BF) !important;
+	background: -webkit-linear-gradient(top, #408dc0, #5BF) !important;
+	background: linear-gradient(top, #408dc0, #5BF) !important;
 }
 
 /*Assistive things */
@@ -167,8 +169,8 @@ ul.menu {
 	width: 250px;
 	top: 30px;
 	right: 24px;
-	background: rgba(255,255,255,0.95);
-	border: 1px solid #DDD;
+	background: rgba(51,51,51,0.95);
+	border: 1px solid #444;
 	z-index: 10002;
 }
 #mainnav .menu-item:hover .sub-menu, #mainnav .sub-menu:hover {
@@ -180,7 +182,7 @@ ul.menu {
 }
 #mainnav .sub-menu li a {
 	display: block;
-	border-bottom: 1px solid #DDD;
+	border-bottom: 1px solid #555;
 	font-size: 0.9em;
 	line-height: 1em;
 	padding: 0.5em 0.1em;
@@ -194,13 +196,14 @@ ul.menu {
 }
 #mainnav li:after {
 	content: "|";
+	color: #ddd;
 	padding: 0 8px;
 }
 #mainnav li:last-child:after {
 	content: '';
 }
 
-#userbar .menu {
+/*#userbar .menu {
 	margin-left: 2px;
 	float: right;
 }
@@ -213,17 +216,37 @@ ul.menu {
 	border-left: 1px solid #3B3B3B;
 	
 	float: right;
-}
+}*/
 	
 /*Header*/
 body>header {
-	width: 100%;
 	padding: 9px 0 0 9px;
-	border-bottom: 1px solid #DDD;
-	background: #F8F8F8;
+	
+	/*border-bottom: 1px solid #DDD;
+	background: #F8F8F8;*/
+	color: #FFF;
+	
+	background: #333;
+	border-bottom: 5px solid #F70;
 }
 body>header>hgroup {
 	float: left;
+}
+body>header a {
+	color: #FFF;
+}
+body>header a:visited {
+	color: #DDD;
+}
+body>header a:hover {
+	color: #5BF;
+}
+body>header a:hover .up {
+	color: #EEE;
+}
+
+header h1 span.up {
+	color: #5BF;
 }
 /*#site-title {
 	padding: 2px 0;
@@ -234,25 +257,30 @@ body>header>hgroup {
 #site-description {
 	display: none;
 }
-body>header img {
+/*body>header img {
 	height: 37px;
 	padding-left: 4px;
 	vertical-align: top;
-}
+}*/
 
 /*Footer*/
-footer {
+body>footer {
+	/*position: absolute;
+	bottom: 0;*/
+	width: 100%;
+	height: 50px;
 	font-size: 0.9em;
-	color: #444;
+	color: #FFF;
+	background: #333;
 	clear: both;
 	text-align: center;
 	padding-top: 10px;
 	font-weight: bold;
+	border-top: 5px solid #F70;
 }
 
 /*Document body/content*/
 #primary {
-	border-right: 1px solid #DDD;
 	width: 80%;
 	width: -moz-calc(100% - 250px);
 	width: -webkit-calc(100% - 250px);
@@ -264,20 +292,23 @@ footer {
 #secondary {
 	position: absolute;
 	right: 0;
-	top: 1em;
+	top: 0;
 	width: 20%;
 	width: -moz-calc(248px);
 	width: -webkit-calc(248px);
 	width: calc(248px);
+	
+	background: #333;
+	border-left: 1px solid #444;
 }
 #secondary>aside {
 	padding: 0.5em 0;
 	margin: 0 1em;
-	background: #FFF;
-	border-bottom: 1px solid #CCC;
+	border-bottom: 1px solid #555;
 }
 #secondary>aside h3 {
 	font-size: 10pt;
+	color: #FFF;
 	line-height: 14pt;
 }
 #secondary>aside:last-child {
@@ -290,6 +321,9 @@ footer {
 
 /*Post formatting*/
 .post{ padding-top: 50px;}
+.post:first-child {
+	padding-top: 0;
+}
 
 .entry-title,.entry-title a {
 	color: #666;
@@ -391,26 +425,6 @@ p {
 	height: 30px;
 	background-position: center right;
 }
-
-/*th {
-	text-align: left;
-}
-
-input {
-	width: 100%;
-}
-input[type=radio] {
-	width: auto;
-}
-.twoinput input {
-	width: 48%;
-}
-.twoinput input:last-child {
-	float: right;
-}
-.normalinput input {
-	width: auto;
-}*/
 
 @media(max-width: 750px) {
 	#mainnav {
