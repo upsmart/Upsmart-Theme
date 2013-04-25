@@ -46,7 +46,6 @@
 
 	?></title>
 <link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <!--[if lt IE 9]>
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
@@ -65,6 +64,7 @@
 	 */
 	wp_head();
 ?>
+<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <script type="text/javascript">
 jQuery(document).ready(function() {
 	jQuery("#primary,#secondary").css("min-height",Math.max(jQuery("#primary").height(),jQuery("#secondary").height()));
@@ -72,7 +72,7 @@ jQuery(document).ready(function() {
 </script>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?>><div id='subbody'>
 	<header>
 		<hgroup>
 			<h1 id="site-title"><span><a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span></h1>

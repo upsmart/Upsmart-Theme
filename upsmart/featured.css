@@ -66,13 +66,6 @@
 	body.page-template-featured-php header a:hover {
 		color: #5BF;
 	}*/
-	header nav li:after {
-		content: "|";
-		padding: 0 8px;
-	}
-	header nav li:last-child:after {
-		content: '';
-	}
 
 	/*Home page content*/
 	#mainnav {
@@ -176,7 +169,7 @@
 		margin: 0.5em;
 	}
 	
-	body>footer {
+	#subbody>footer {
 		border-top: 0 none;
 	}
 	
@@ -345,7 +338,7 @@
 	.featured-2col {
 		float: none;
 		width: 100%;
-	}`
+	}
 	.featured-1col {
 		width: 50%;
 	}

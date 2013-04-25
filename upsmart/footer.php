@@ -21,5 +21,5 @@
 	</div>
 </footer>
 <?php wp_footer(); ?>
-</body>
+</div></body>
 </html>

@@ -38,7 +38,7 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 	outline: 0;
 }
 body {
-	background: #fff !important;
+        background: #fff !important;
 	line-height: 1;
 }
 ol, ul {
@@ -74,7 +74,7 @@ body {
 	font-family: 'Open Sans','Helvetica Neue','Helvetica','Arial',sans-serif;
 	font-size: 10pt;
 	line-height: 14pt;
-	background: #FFF;
+	background: #FFF
 	padding-top: 25px;
 }
 
