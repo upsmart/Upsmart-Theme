@@ -41,7 +41,8 @@ html,body {
 	height: 100%;
 }
 body {
-	background: #fff !important;
+	background-image: url("https://dl.dropboxusercontent.com/u/11993667/texture.jpg");
+	background-repeat: repeat;
 	line-height: 1;
 	height: 100%;
 	position: relative;
@@ -79,7 +80,6 @@ body {
 	font-family: 'Open Sans','Helvetica Neue','Helvetica','Arial',sans-serif;
 	font-size: 10pt;
 	line-height: 14pt;
-	background: #FFF;
 }
 
 /* Element formatting */
@@ -177,7 +177,7 @@ ul.menu {
 	display: none;
 	width: 250px;
 	top: 30px;
-	right: 0;
+	right: 24px;
 	background: rgba(51,51,51,0.95);
 	border: 1px solid #444;
 	z-index: 10002;
@@ -188,7 +188,6 @@ ul.menu {
 #mainnav .sub-menu li {
 	float: none;
 	display: block;
-	border-right: 0 none;
 }
 #mainnav .sub-menu li a {
 	display: block;
@@ -446,9 +445,6 @@ p {
 	#mainnav {
 		font-size: 1.2em;
 	}
-	#mainnav .sub-menu {
-		top: 20px;
-	}
 	#mainnav .menu-item,
 .menu>ul>li {
 		line-height: 1.07em;
@@ -468,4 +464,67 @@ div#subnav.item-list-tabs,
 .upsmart-share-tool {
 	vertical-align: middle;
 	padding-right: 5px;
+}
+
+/* tabbed login widget*/
+.username, .password, .login_fields{
+	width:70%;
+}
+html.social-js body.home-page div#subbody div#wrapper section#featured div#featured-login.featured-2col div aside#tabbed-login-widget-2.widget div#login-register-password div.tab_container_login div#login.tab_content_login form.wp-user-form div.login_fields div.rememberme{
+	height: 35px;
+}
+
+#tabbed-login-space, .tab_container_login{
+	background: #5bf;
+} 
+
+
+
+.tab_container_login{
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 0px;
+	margin: 0 0 0;
+	border: none;
+	top: 0px;
+}
+
+ul.tabs_login li, html ul.tabs_login li.active_login{
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	border: none;
+}
+
+/*ul.tabs_login{
+	top: -2px
+}*/
+
+html body ul.tabs_login li.active_login a{
+        color: #fff;
+        font-weight; bold;
+}       
+
+html body ul.tabs_login li.active_login {
+        background: #55BBFF !important;
+}
+ 
+html.social-js body.home-page div#subbody div#wrapper section#featured div#featured-login.featured-2col div aside#tabbed-login-widget-2.widget div#login-register-password div.tab_container_login div#login.tab_content_login form.wp-user-form{
+	color: #eee;
+}
+
+/*Styling social buttons*/
+
+#facebook{
+	background:#3B5998;
+}
+#googleplus{
+	background:#D14836;
+}
+#twitter{
+	background:#39A9E0;
+}
+#rss{
+	background:#FF8300;
 }

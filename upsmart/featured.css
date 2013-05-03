@@ -3,13 +3,11 @@
 /*Home page*/
 
 	/*Home page header*/
-	#subbody > header {
-		min-height: 70px;
-		padding-top: 39px;
+	header {
+		min-height: 100px;
 	}
-	#subbody > header hgroup {
+	header hgroup {
 		float: left;
-		margin-top: -30px;
 	}
 	header h1 {
 		font-size: 72px;
@@ -43,8 +41,36 @@
 	header nav .menu-item:hover .sub-menu, header nav .sub-menu:hover {
 		display: block;
 	}
+	/*header nav .sub-menu li {
+		float: none;
+		display: block;
+	}
+	header nav .sub-menu li a {
+		display: block;
+		border-bottom: 1px solid #DDD;
+		font-size: 0.9em;
+		line-height: 1em;
+		padding: 0.5em 0.1em;
+	}
+	header nav .sub-menu li:last-child a {
+		border: 0 none;
+	}
+	header nav .sub-menu li:after {
+		padding: 0;
+		content: '';
+	}
+	body.page-template-featured-php header a {
+		color: #555;
+		text-decoration: none;
+	}
+	body.page-template-featured-php header a:hover {
+		color: #5BF;
+	}*/
 
 	/*Home page content*/
+	#mainnav {
+	  padding-top: 30px;
+	}
 	#wrapper {
 		width: 80%;
 		min-width: 1100px;
@@ -73,12 +99,12 @@
 		margin-right: 5px;
 	}
 	.featured-2col {
-		width: 50%;
+		width: 35%;
 		float: left;
 		
 	}
 	.featured-1col {
-		width: 25%;
+		width: 65%;
 		float: left;
 	}
 	.featured-1row>div {
@@ -90,14 +116,13 @@
 	.featured-content>div {
 		font-size: 0.9em;
 		line-height: 21px;
-		padding: 5px; background: #FFF; height: 185px; overflow: hidden;
+		padding: 5px; background: #FF7700; height: 185px; overflow: hidden;
+		max-height: 65px;
 	}
 	
 	#featured-login>div {
 		margin-right: 5px;
-		height: 400px;
 		position: relative;
-		background: url("images/mountains.jpg") center center;
 	}
 	#loginform {
 		position: absolute;
@@ -362,3 +387,76 @@
 	clear: both;
 }
 
+/*Removing create discover and invest background*/
+#wrapper > * {
+        background: none !important;
+}
+
+/*Featured Widget*/
+.featured-2col.featured-1row.featured-content{
+	width: 65%;
+	max-height: 70px;
+	margin-bottom: 5px;
+}
+
+/*Headding text*/
+html.social-js body.home-page div#subbody div#wrapper section#featured div.featured-2col div h3{
+	text-align:center;
+	color:#eee;
+	weight: bold;
+	line-height: 65px;
+}	
+
+#tabbed-login-space{
+	height: 310px;
+	width: 90%;
+	float: right;
+}
+
+#featured-in {
+	height: 91px;
+	background: url(https://dl.dropboxusercontent.com/u/11993667/Featured.png) no-repeat center center;
+	background-size: 100% auto;
+	color: #333;
+	float: left;
+	width: 100%;
+}
+
+html.social-js body.home-page div#subbody div#wrapper section#featured div#featured-login.featured-2col div#featured-in div.featured-in-headding img{
+	height: 85px;
+	float: right;
+	margin-left: 10px;
+	visibility: hidden;
+}
+
+html.social-js body.home-page div#subbody div#wrapper section#featured div#featured-login.featured-2col div#featured-in div.featured-in-headding h3{
+	color: #333;
+	float: left;
+}
+.img-foundry {
+	margin: 0 !important;
+	width: 185px;
+}
+html.social-js body.home-page div#subbody div#wrapper section#featured div#featured-login.featured-2col div#featured-in div.featured-in-headding h4{
+	padding-top: 10px;
+}
+
+#social{
+	width: 32px;
+	float: left;
+	background: none;
+	margin-top: 40px;
+	line-height: 2.5;
+}
+	
+#login-register-password h3{
+	border-bottom: none;
+}
+.userinfo{
+	color: #fff;
+}
+a{
+	color: #eee !important;
+	font-weight: bold;
+}
+.usericon { margin-left: 10px;}

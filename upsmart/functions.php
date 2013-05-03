@@ -422,8 +422,8 @@ function upsmart_widgets_init() {
 	) );
 
         register_sidebar( array(
-                'name' => __( 'Homepage Featured Area 2', 'upsmart' ),
-                'id' => 'home-featured-2',
+                'name' => __( 'Homepage Login Area', 'upsmart' ),
+                'id' => 'home-login',
                 'description' => __( 'A widget area for the home page', 'upsmart' ),
                 'before_widget' => '<aside id="%1$s" class="widget %2$s">',
                 'after_widget' => "</aside>",

@@ -5,25 +5,24 @@ Template Name: UpSmart Home
 
 get_header("featured"); ?>
 <section id='featured' style='background: transparent; padding: 0;'>
-	<div id='featured-login' class='featured-2col'><div>
-		
-		<?php if(is_user_logged_in()): $user = wp_get_current_user(); ?>
-			<h2 style='position: absolute; bottom: 0; color: #FFF;'>Welcome back, <?php echo $user->display_name; ?>.</h2>
-		<?php else: ?>
-			<?php wp_login_form(); ?>
-		<?php endif; ?>
+	<div id='featured-login' class='featured-2col'><div id='social'>
+	<input type="image" id="facebook" src="https://dl.dropboxusercontent.com/u/11993667/social/facebook-32.png" />
+	<input type="image" id="twitter" src="https://dl.dropboxusercontent.com/u/11993667/social/twitter-32.png" />
+	<input type="image" id="googleplus" src="https://dl.dropboxusercontent.com/u/11993667/social/googleplus-32.png" />
+	<input type="image" id="rss" src="https://dl.dropboxusercontent.com/u/11993667/social/rss-32.png" />
+	</div>
+	<div id='tabbed-login-space'>
+                <?php dynamic_sidebar( 'home-login' ); ?>
+	</div>
+	<div id='featured-in'> <div class='featured-in-headding'>
+	<h4>As Featured by:</h4>
 	</div></div>
-	<div class='featured-2col featured-1row featured-content'><div>
-		<?php if (have_posts()) : while (have_posts()) : the_post();?>
-			<h2><?php the_title();?></h2>
-			<?php the_content(); ?>
-		<?php endwhile; endif; ?>
+	</div>
+	<div class='featured-2col featured-1row featured-content'><div class='featured-headding'>
+		<h3>UpSmart: Free services to guide entrepreneurs from concept to completion.</h3>
 	</div></div>
-	<div class='featured-1col featured-1row featured-bottomrow widget-area'><div style='position: relative;'>
-		<?php dynamic_sidebar( 'home-featured-1' ); ?>
-	</div></div>
-	<div class='featured-1col featured-1row featured-bottomrow widget-area'><div style='position: relative;'>
-		<?php dynamic_sidebar( 'home-featured-2' ); ?>
+	<div class='featured-1col featured-1row featured-bottomrow'><div style='position: relative;'>
+		<?php echo do_shortcode("[metaslider id=2633]"); ?>
 	</div></div>
 	<br style='clear: both'/>
 </section>
