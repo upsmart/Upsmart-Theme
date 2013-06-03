@@ -470,7 +470,7 @@ div#subnav.item-list-tabs,
 .username, .password, .login_fields{
 	width:70%;
 }
-html.social-js body.home-page div#subbody div#wrapper section#featured div#featured-login.featured-2col div aside#tabbed-login-widget-2.widget div#login-register-password div.tab_container_login div#login.tab_content_login form.wp-user-form div.login_fields div.rememberme{
+div#subbody div#wrapper section#featured div#featured-login.featured-2col div aside#tabbed-login-widget-2.widget div#login-register-password div.tab_container_login div#login.tab_content_login form.wp-user-form div.login_fields div.rememberme{
 	height: 35px;
 }
 
@@ -510,7 +510,7 @@ html body ul.tabs_login li.active_login {
         background: #55BBFF !important;
 }
  
-html.social-js body.home-page div#subbody div#wrapper section#featured div#featured-login.featured-2col div aside#tabbed-login-widget-2.widget div#login-register-password div.tab_container_login div#login.tab_content_login form.wp-user-form{
+div#subbody div#wrapper section#featured div#featured-login.featured-2col div aside#tabbed-login-widget-2.widget div#login-register-password div.tab_container_login div#login.tab_content_login form.wp-user-form{
 	color: #eee;
 }
 
@@ -528,3 +528,13 @@ html.social-js body.home-page div#subbody div#wrapper section#featured div#featu
 #rss{
 	background:#FF8300;
 }
+.rememberme{
+        margin-bottom: 7px;
+        overflow: hidden; 
+        width: 100%;
+}
+$v#login-register-password div.tab_container_login div#login.tab_content_login form.wp-user-form{
+        color: #eee;
+}
+
+
