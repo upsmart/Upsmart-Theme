@@ -45,6 +45,10 @@
 	}
 
 	/*Home page content*/
+	body{
+		background-image: url("https://dl.dropboxusercontent.com/u/11993667/Homepage%20Background.png") !important;
+	}
+
 	#wrapper {
 		width: 80%;
 		min-width: 1100px;

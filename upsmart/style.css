@@ -468,7 +468,7 @@ div#subnav.item-list-tabs,
 
 /* tabbed login widget*/
 .username, .password, .login_fields{
-	width:70%;
+	width:100%;
 }
 div#subbody div#wrapper section#featured div#featured-login.featured-2col div aside#tabbed-login-widget-2.widget div#login-register-password div.tab_container_login div#login.tab_content_login form.wp-user-form div.login_fields div.rememberme{
 	height: 35px;
@@ -497,6 +497,32 @@ ul.tabs_login li, html ul.tabs_login li.active_login{
 	border: none;
 }
 
+.user-submit{float: right;}
+
+form.wp-user-form div.login_fields{
+		
+}
+
+#rememberme{
+	margin: 0px 5px -4px 0px;
+}
+
+.rememberme{
+        margin-bottom: 7px;
+        overflow: visible; 
+        width: 60%;
+	display: inline-block;
+}
+
+#login.tab_content_login form.wp-user-form div.login_fields{
+	margin-top: 15px;
+}
+
+#login-register-password div.tab_container_login div#login.tab_content_login form.wp-user-form{
+        color: #eee;
+}
+
+
 /*ul.tabs_login{
 	top: -2px
 }*/
@@ -514,6 +540,11 @@ div#subbody div#wrapper section#featured div#featured-login.featured-2col div as
 	color: #eee;
 }
 
+/*As Featured in Section*/
+#featured-in > img{
+	width: 100%;
+}
+
 /*Styling social buttons*/
 
 #facebook{
@@ -527,14 +558,6 @@ div#subbody div#wrapper section#featured div#featured-login.featured-2col div as
 }
 #rss{
 	background:#FF8300;
-}
-.rememberme{
-        margin-bottom: 7px;
-        overflow: hidden; 
-        width: 100%;
-}
-$v#login-register-password div.tab_container_login div#login.tab_content_login form.wp-user-form{
-        color: #eee;
 }
 
 

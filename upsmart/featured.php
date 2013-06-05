@@ -17,6 +17,7 @@ get_header("featured"); ?>
 		</div>
 		<div id='featured-in'>
 			<h4>As Featured by:</h4>
+                        <img src="https://dl.dropboxusercontent.com/u/11993667/Featured.png" alt="Featured by" height:"91" widght:"439">
 		</div>
 	</div>
 	<h3 id='featured-tagline'>UpSmart: Free services to guide entrepreneurs from concept to completion.</h3>
