@@ -23,7 +23,6 @@ get_header("featured"); ?>
         <div id='featured-slideshow'><div style='position: relative;'>
                 <?php echo do_shortcode("[metaslider id=2661]"); ?>
         </div></div>
-        <h3 id='featured-tagline'>UpSmart: Free services to guide entrepreneurs from concept to completion.</h3>
 <br style='clear: both'/>
 </section>
 

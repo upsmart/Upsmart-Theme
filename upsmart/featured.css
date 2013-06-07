@@ -82,7 +82,7 @@
 	}
 	
 #featured-slideshow {
-	background: rgba(255, 119, 0, 0.7) !important;
+	background: rgba(255, 119, 0, 0.8) !important;
 	}
 	
 	#featured-in {
@@ -108,8 +108,23 @@
 	
 	#featured-login {
 		color: #FFF;
+		height: 185px;
 	}
 	
+	#sidebox-background {
+		background: #55bbff;
+		height: 157px;
+		padding: 7px 15px 15px 15px
+	}	
+
+	div#sidebox-background div.sidebox div.userinfo p a{
+		color: #333;
+	}
+	
+	#login-register-password h3{
+		border-bottom: 2px solid #fff;
+	}
+
 	#featured-social {
 		position: absolute;
 		width: 32px;
