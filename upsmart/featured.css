@@ -254,7 +254,7 @@
 	#bottom>div.selected>div {
 		border: medium none; /*1px solid #ddd;*/
 		/*padding: 8px;*/
-		background-color: rgba(255,255,255,0.95);
+		background:transparent;
 		margin: 0;
 		height: 460px;
 		height: calc(460px + 1.5em);
