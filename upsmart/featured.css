@@ -171,12 +171,12 @@
 	}
 
 	#bottom>div {
-		width: 33.3333333%;
+		width: 30.3333333%;
 		position: absolute;
 		z-index: 10000;
 	}
 	#bottom>div:nth-child(2) {
-		left: 33.3333333%;
+		left: 34.733%;
 	}
 	#bottom>div:nth-child(3) {
 		left: 66.6666666%;
