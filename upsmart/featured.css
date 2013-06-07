@@ -65,7 +65,7 @@
 
 	#featured {
 		font-size: 1.5em;
-		margin: 1em 0;
+		margin: 2em 0;
 		position: relative;
 	}
 	
@@ -163,7 +163,7 @@
 	}*/
 	
 	#bottom {
-		margin-top: 1.5em;
+		margin-top: 5.5em;
 		height: 100px;
 	}
 	#bottom>div>div {
