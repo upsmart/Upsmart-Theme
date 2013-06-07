@@ -47,6 +47,9 @@
 	/*Home page content*/
 	body{
 		background-image: url("https://dl.dropboxusercontent.com/u/11993667/Homepage%20Background.png") !important;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
 	}
 
 	#wrapper {
@@ -78,6 +81,9 @@
 		
 	}
 	
+#featured-slideshow {
+	background: rgba(255, 119, 0, 0.7) !important;
+	}
 	
 	#featured-in {
 		padding-top: 10px;
@@ -172,6 +178,10 @@
 	#bottom .textwidget aside {
 		display: none;
 	}
+	#bottom .textwidget{
+		background: rgba(255, 255, 255, 0.7);
+		height: 100px;
+	}
 	#bottom>div:first-child>div {
 		margin-left: 0;
 	}
@@ -184,7 +194,7 @@
 		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 		font-weight: bold;
 		font-size: 50pt;
-		color: #4AA4E0;
+		color: #333;
 		text-align: center;
 		
 		padding-top: 40px;
