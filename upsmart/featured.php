@@ -21,7 +21,7 @@ get_header("featured"); ?>
 		</div>
 	</div>
         <div id='featured-slideshow'><div style='position: relative;'>
-                <?php echo do_shortcode("[metaslider id=2661]"); ?>
+                <?php echo do_shortcode("[metaslider id=2662]"); ?>
         </div></div>
 <br style='clear: both'/>
 </section>
